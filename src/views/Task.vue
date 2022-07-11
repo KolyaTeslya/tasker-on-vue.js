@@ -8,9 +8,11 @@
         <div class="chips" ref="chips"></div>
 
         <div class="input-field">
-          <textarea style="min-height: 150px" v-model="description" id="discription" class="materialize-textarea"></textarea>
-          <label for="discription">Description</label>
-          <span class="character-counter" style="float: right; font-size: 12px;">{{ description.length }}/2048</span>
+          <input id="description" v-model="description" type="text" class="validate" required>
+<!--          <textarea style="min-height: 150px" v-model="description" id="description" class="materialize-textarea"></textarea>-->
+          <label for="description">Description</label>
+          <span class="helper-text" data-error="Description is required"></span>
+          <!--          <span class="character-counter" style="float: right; font-size: 12px;">{{ description.length }}/2048</span>-->
         </div>
 
         <input type="text" ref="datepicker">

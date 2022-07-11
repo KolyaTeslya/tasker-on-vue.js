@@ -21,12 +21,14 @@
     <table v-if="tasks.length">
       <thead>
       <tr>
-        <th>#</th>
-        <th>Title</th>
-        <th>Date</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Deadline</th>
         <th>Description</th>
         <th>Status</th>
-        <th>Open</th>
+        <th>Tags</th>
+        <th>Date of creation</th>
+        <th>Edit</th>
       </tr>
       </thead>
       <tbody>
@@ -38,6 +40,8 @@
           <td>{{task.title}}</td>
           <td>{{new Date(task.date).toLocaleDateString()}}</td>
           <td class="td"> <div class="text"> {{task.description}} </div></td>
+          <td> {{task.status}}</td>
+          <td> {{task.tags}}</td>
           <td> {{task.status}}</td>
           <td>
             <router-link tag="button" class="btn btn-small" :to="'/task/' + task.id">

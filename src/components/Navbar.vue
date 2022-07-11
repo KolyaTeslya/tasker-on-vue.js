@@ -1,7 +1,7 @@
 <template>
   <nav class="blue darken-3">
   <div class="nav_wrapper ">
-    <router-link to="/" class="brand-logo">Tasks</router-link>
+    <router-link to="/list" class="brand-logo">Tasks</router-link>
     <ul class="right hide-on-med-and-down">
       <router-link
         tag="li"
